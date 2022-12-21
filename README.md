@@ -29,7 +29,7 @@ npx degit abodo-dev/maizzle maizzle
 Install dependencies:
 
 ```
-cd my-project
+cd maizzle
 
 npm install
 ```
