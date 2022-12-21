@@ -23,7 +23,7 @@
 Clone this starter:
 
 ```bash
-npx degit abodo-dev/maizzle my-project
+npx degit abodo-dev/maizzle maizzle
 ```
 
 Install dependencies:
