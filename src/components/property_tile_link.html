@@ -1,0 +1,18 @@
+<a href="{{ url }}" class="[text-decoration:none] shadow-md rounded overflow-hidden">
+  <div class="relative">
+    <img class="aspect-video w-full object-cover" src="{{ imgUrl }}"/>
+    <div class="text-slate-700 p-2 shadow-md absolute rounded font-extrabold bg-white bottom-0 right-2">{{price}}</div>
+  </div>
+
+  <div class="text-slate-700 font-semibold p-3 pt-1">
+    <div class="whitespace-nowrap text-ellipsis overflow-hidden">
+      {{ name }}
+    </div>
+    <div class="text-xs whitespace-nowrap text-ellipsis overflow-hidden">
+      {{ address }}
+    </div>
+    <div class="text-xs whitespace-nowrap text-ellipsis overflow-hidden">
+      {{ beds }} | {{ available }}
+    </div>
+  </div>
+</a>
