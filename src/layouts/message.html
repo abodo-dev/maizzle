@@ -1,0 +1,87 @@
+<!DOCTYPE {{{ page.doctype || 'html' }}}>
+<html lang="{{ page.language || 'en' }}" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <meta charset="{{ page.charset || 'utf-8' }}">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings xmlns:o="urn:schemas-microsoft-com:office:office">
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <style>
+    td,th,div,p,a,h1,h2,h3,h4,h5,h6 {font-family: "Segoe UI", sans-serif; mso-line-height-rule: exactly;}
+  </style>
+  <![endif]-->
+  <if condition="page.title">
+    <title>{{{ page.title }}}</title>
+  </if>
+  <style>
+    {{{ page.css }}}
+  </style>
+  <block name="head"></block>
+</head>
+<body class="m-0 p-0 w-full [word-break:break-word] [-webkit-font-smoothing:antialiased] {{ page.bodyClass || '' }}">
+  <if condition="page.preheader">
+    <div class="hidden">
+      {{{ page.preheader }}}
+      <each loop="item in Array.from(Array(150))">&#847; </each>
+    </div>
+  </if>
+  <div role="article" aria-roledescription="email" aria-label="{{{ page.title || '' }}}" lang="{{ page.language || 'en' }}">
+    <table class="w-full font-sans">
+      <tr>
+        <td align="center" class="bg-slate-50">
+          <table class="w-150 sm:w-full">
+            <tr>
+              <td class="px-12 py-12 sm:py-8 sm:px-6 text-left">
+                <a href="https://rentable.co">
+                  <img src="https://public-photos.rentable.co/emails/rentable_logo.png" width="120" alt="Maizzle" class="max-w-full align-left [border:0]">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" class="sm:px-6">
+                <table class="w-full">
+                  <tr>
+                    <td>
+                      <block name="template"></block>
+                    </td>
+                  </tr>
+                  <tr role="separator">
+                    <td class="h-12"></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center text-slate-600 text-xs px-6 pb-12">
+                      <p class="m-0 italic">
+                        Copyright © 2011– 2022 Rentable, All rights reserved.
+                        <br/>
+                        PO Box 7640, Madison, WI 53707
+                      </p>
+                      <p class="cursor-default">
+                        <a href="https://www.rentable.co" class="text-red-800 [text-decoration:none] hover:[text-decoration:underline]">Visit Rentable</a>
+                        &bull;
+                        <a href="https://www.rentable.co/terms" class="text-red-800 [text-decoration:none] hover:[text-decoration:underline]">Terms</a>
+                        &bull;
+                        <a href="https://www.rentable.co/privacy" class="text-red-800 [text-decoration:none] hover:[text-decoration:underline]">Privacy</a>
+                        &bull;
+                        <a href="https://www.rentable.co/unsubscribe" class="text-red-800 [text-decoration:none] hover:[text-decoration:underline]">Unsubscribe</a>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
