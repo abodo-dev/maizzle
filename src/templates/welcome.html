@@ -1,0 +1,115 @@
+---
+title: "Welcome to Rentable"
+preheader: ""
+bodyClass: bg-slate-50
+renterName: "Rose"
+marketName: "Madison"
+marketState: "WI"
+marketUrl: "https://rentable.co/madison-wi"
+---
+
+<extends src="src/layouts/message.html">
+  <block name="template">
+    <table>
+      <tr>
+        <td align="center" class="sm:px-6">
+          <table class="w-full">
+            <tr>
+              <td class="p-12 sm:px-6 bg-white text-slate-700 text-base text-left leading-6 rounded shadow-sm">
+                <p class="text-2xl sm:leading-8 text-black font-semibold m-0 mb-6">
+                  You’re one step closer to home.
+                </p>
+                <p>
+                  Hi {{{ page.renterName }}},
+                </p>
+                <p>
+                  Thanks for searching with Rentable!
+                </p>
+                <p class="m-0 mb-6">
+                  Get access to thousands of apartments, including properties you won’t find anywhere else.
+                </p>
+                <table class="w-full" role="separator">
+                  <tr>
+                    <td class="py-8">
+                      <div class="bg-slate-200 h-px leading-px">&zwnj;</div>
+                    </td>
+                  </tr>
+                </table>
+                <p class="m-0 mb-4">
+                  Thanks, <br />The Rentable Team
+                </p>
+              </td>
+            </tr>
+            <tr class="mt-12 w-full h-10"></tr>
+            <tr>
+              <td class="p-12 sm:px-6 bg-white text-slate-700 text-base text-left leading-6 rounded shadow-sm">
+                <p class="text-2xl sm:leading-8 text-black font-semibold m-0 mb-6">
+                  Top Apartments in {{{ page.marketName }}}
+                </p>
+                <p>
+                  <div class="grid grid-cols-2 gap-4 sm:grid-cols-1">
+                    <component
+                      src="src/components/property_tile_link.html"
+                      name="Creekside Apartments and Condos"
+                      address="233 Whitney Way, Madison WI"
+                      price="$1,100-2,230"
+                      beds="1-2 BR"
+                      available="Available Now"
+                      url="https://www.rentable.co/madison-wi/the-stadium"
+                      imgUrl="https://images1.apartments.com/i2/tZCAXc6qisBONrIojZCmUMDCCtC0rf516oC9rp9teQo/117/esker-apartments-madison-wi-building-photo.jpg"
+                    ></component>
+                    <component
+                      src="src/components/property_tile_link.html"
+                      name="559 Main Street"
+                      address="Madison WI"
+                      price="$950"
+                      beds="1 BR"
+                      available="Available Mar. 12, 2022"
+                      url="https://www.rentable.co/madison-wi/the-stadium"
+                      imgUrl="https://pyxis.nymag.com/v1/imgs/3b7/66f/9f550fcdabe47c4fd4f7943e4988993522-small-apartment-lede.jpg"
+                    ></component>
+                    <component
+                      src="src/components/property_tile_link.html"
+                      name="Cardinal Apartments"
+                      address="1988 E. Wilson St. Madison, WI"
+                      price="$1,200"
+                      beds="1-2 BR"
+                      available="Available Now"
+                      url="https://www.rentable.co/madison-wi/the-stadium"
+                      imgUrl="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iNIfKpJ7Z_M0/v1/1200x-1.jpg"
+                    ></component>
+                    <component
+                      src="src/components/property_tile_link.html"
+                      name="The Landing on East Hill Parkway"
+                      address="252 E. Hill Pkway Madison, WI"
+                      price="$1,410-1,725"
+                      beds="Studio-1 BR"
+                      available="Available Jan. 1, 2022"
+                      url="https://www.rentable.co/madison-wi/the-stadium"
+                      imgUrl="https://images1.apartments.com/i2/gS-VYUOs5uTTM_HlCcHxrxGCoTYK42UZ4CXW8bB-nG8/117/novel-midtown-tampa-fl-building-photo.jpg"
+                    ></component>
+                  </div>
+                </p>
+
+                <div class="leading-full">
+                  <a
+                    href="{{{ page.marketUrl }}}"
+                    class="inline-block py-3.5 px-4 mt-2 rounded text-base font-semibold text-center [text-decoration:none] text-white bg-red-800 hover:bg-red-700"
+                  >
+                    <outlook>
+                      <i class="tracking-6 -mso-font-width-full mso-text-raise-7.5">&#8202;</i>
+                    </outlook>
+                    <span class="mso-text-raise-4">Search All {{{ page.marketName }}}, {{{ page.marketState }}} Apartments &rarr;</span>
+                    <outlook>
+                      <i class="tracking-6 -mso-font-width-full">&#8202;</i>
+                    </outlook>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </block>
+</extends>
