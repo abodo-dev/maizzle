@@ -1,11 +1,13 @@
 ---
-title: "Welcome to Rentable"
+title: "Related Apartments for Your Search - Don't Miss Out!"
 preheader: ""
 bodyClass: bg-slate-50
 renterName: "Rose"
 marketName: "Madison"
-marketState: "WI"
 marketUrl: "https://rentable.co/madison-wi"
+contactPropertyName: "Kennedy Place"
+contactedPropertyImgUrl: "https://images1.apartments.com/i2/ShAYKIDkWajeQVV31W0J7P3WoFvVTi8Q7T_FweSgBbw/117/reserve-at-high-point-madison-wi-building-photo.jpg"
+contactDate: "8/22/22"
 ---
 
 <extends src="src/layouts/message.html">
@@ -15,12 +17,30 @@ marketUrl: "https://rentable.co/madison-wi"
         <td align="center" class="sm:px-6">
           <table class="w-full">
             <tr>
-              <td class="p-12 sm:px-6 bg-white text-slate-700 text-base text-left leading-6 rounded shadow-sm">
-                <p class="text-2xl sm:leading-8 text-black font-semibold m-0 mb-6">
-                  Still looking for a place in {{{ page.marketName }}}?
+              <td class="p-12 sm:px-6 bg-white text-slate-900 text-base text-left leading-6 rounded shadow-sm">
+                <p class="text-xl sm:leading-8 font-bold m-0 mb-5">
+                  Based on your interest in:
                 </p>
                 <p class="mb-6">
-                  We found a few properties that are similar to the ones you've already contacted.
+                  {{{ page.contactPropertyName }}} - contacted on {{{ page.contactDate }}}
+                </p>
+                <div class="mb-2">
+                  <img class="aspect-video w-full object-cover" src="{{ page.contactedPropertyImgUrl }}" alt="{{{page.contactedPropertyName}}}"/>
+                </div>
+
+                <table class="w-full" role="separator">
+                  <tr>
+                    <td class="py-8">
+                      <div class="bg-slate-200 h-px leading-px">&zwnj;</div>
+                    </td>
+                  </tr>
+                </table>
+
+                <p class="text-xl sm:leading-8 font-bold m-0 mb-5">
+                  We found similar apartments you may also want to contact!
+                </p>
+                <p class="mb-6">
+                  For a limited time, we’ll send you related apartments to help you find a place to call home.
                 </p>
 
                 <p>
@@ -31,6 +51,7 @@ marketUrl: "https://rentable.co/madison-wi"
                     price="$1,100-2,230"
                     beds="1-2 BR"
                     available="Available Now"
+                    photoCount="54"
                     url="https://www.rentable.co/madison-wi/the-stadium"
                     imgUrl="https://images1.apartments.com/i2/tZCAXc6qisBONrIojZCmUMDCCtC0rf516oC9rp9teQo/117/esker-apartments-madison-wi-building-photo.jpg"
                   ></component>
@@ -41,6 +62,7 @@ marketUrl: "https://rentable.co/madison-wi"
                     price="$950"
                     beds="1 BR"
                     available="Available Mar. 12, 2022"
+                    photoCount="2"
                     url="https://www.rentable.co/madison-wi/the-stadium"
                     imgUrl="https://pyxis.nymag.com/v1/imgs/3b7/66f/9f550fcdabe47c4fd4f7943e4988993522-small-apartment-lede.jpg"
                   ></component>
@@ -51,6 +73,7 @@ marketUrl: "https://rentable.co/madison-wi"
                     price="$1,200"
                     beds="1-2 BR"
                     available="Available Now"
+                    photoCount="15"
                     url="https://www.rentable.co/madison-wi/the-stadium"
                     imgUrl="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iNIfKpJ7Z_M0/v1/1200x-1.jpg"
                   ></component>
@@ -61,21 +84,21 @@ marketUrl: "https://rentable.co/madison-wi"
                     price="$1,410-1,725"
                     beds="Studio-1 BR"
                     available="Available Jan. 1, 2022"
+                    photoCount="240"
                     url="https://www.rentable.co/madison-wi/the-stadium"
                     imgUrl="https://images1.apartments.com/i2/gS-VYUOs5uTTM_HlCcHxrxGCoTYK42UZ4CXW8bB-nG8/117/novel-midtown-tampa-fl-building-photo.jpg"
                   ></component>
-
                 </p>
 
                 <div class="leading-full">
                   <a
                     href="{{{ page.marketUrl }}}"
-                    class="inline-block py-3.5 px-4 mt-2 rounded text-base font-semibold text-center [text-decoration:none] text-white bg-red-800 hover:bg-red-700"
+                    class="leading-5 w-full inline-block py-3.5 mt-4 rounded text-base font-semibold text-center [text-decoration:none] text-white bg-red-800 hover:bg-red-700"
                   >
                     <outlook>
                       <i class="tracking-6 -mso-font-width-full mso-text-raise-7.5">&#8202;</i>
                     </outlook>
-                    <span class="mso-text-raise-4">Search All {{{ page.marketName }}}, {{{ page.marketState }}} Apartments &rarr;</span>
+                    <span class="mso-text-raise-4">View more {{{page.marketName}}} apartments &rarr;</span>
                     <outlook>
                       <i class="tracking-6 -mso-font-width-full">&#8202;</i>
                     </outlook>

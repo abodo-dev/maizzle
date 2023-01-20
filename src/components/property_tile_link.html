@@ -1,19 +1,24 @@
-<div class="mb-8">
-  <a href="{{ url }}" class="[text-decoration:none]">
-    <img class="aspect-video w-full rounded object-cover" src="{{ imgUrl }}"/>
-    <div class="text-slate-700 font-extrabold pt-2 whitespace-nowrap text-ellipsis overflow-hidden">
+<div class="mb-10">
+  <a href="{{ url }}" class="text-slate-900 [text-decoration:none]">
+    <img class="aspect-video w-full object-cover" src="{{ imgUrl }}"/>
+    <div class="text-xl font-bold pt-2 whitespace-nowrap text-ellipsis overflow-hidden">
       {{ name }}
     </div>
-    <div class="font-semibold text-slate-700">
-      <div class="text-xs whitespace-nowrap text-ellipsis overflow-hidden">
+    <div class="mt-1">
+      <div class="mb-1 whitespace-nowrap text-ellipsis overflow-hidden">
         {{ address }}
       </div>
-      <div class="text-xs">
+      <div class="mb-1">
         {{price}}
       </div>
-      <div class="text-xs">
+      <div>
         {{ beds }} | {{ available }}
       </div>
     </div>
   </a>
+  <div class="mt-4">
+    <a href="{{ url }}" class="[text-decoration:none] text-slate-900 text-sm font-semibold rounded border-solid border-2 border-slate-900 px-4 py-2 hover:text-red-700 hover:border-red-700">
+      View {{{photoCount}}} photos
+    </a>
+  </div>
 </div>
