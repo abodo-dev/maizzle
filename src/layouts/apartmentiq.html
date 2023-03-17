@@ -1,0 +1,106 @@
+<!DOCTYPE {{{ page.doctype || 'html' }}}>
+<html lang="{{ page.language || 'en' }}" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <meta charset="{{ page.charset || 'utf-8' }}">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings xmlns:o="urn:schemas-microsoft-com:office:office">
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <style>
+    td,th,div,p,a,h1,h2,h3,h4,h5,h6 {font-family: "Segoe UI", sans-serif; mso-line-height-rule: exactly;}
+  </style>
+  <![endif]-->
+  <if condition="page.title">
+    <title>{{{ page.title }}}</title>
+  </if>
+  <style>
+    {{{ page.css }}}
+  </style>
+  <block name="head"></block>
+</head>
+<body class="m-0 p-0 w-full [word-break:break-word] [-webkit-font-smoothing:antialiased] {{ page.bodyClass || '' }}">
+  <if condition="page.preheader">
+    <div class="hidden">
+      {{{ page.preheader }}}
+      <each loop="item in Array.from(Array(150))">&#847; </each>
+    </div>
+  </if>
+  <div role="article" aria-roledescription="email" aria-label="{{{ page.title || '' }}}" lang="{{ page.language || 'en' }}">
+    <table class="w-full font-sans">
+      <tr>
+        <td align="center" class="bg-slate-50">
+          <table class="w-150 sm:w-full">
+            <tr>
+              <td align="center" class="sm:px-6">
+                <table class="w-full">
+                  <tr>
+                    <td>
+                      <table>
+                        <tr>
+                          <td align="center" class="px-6 sm:px-1">
+                            <table class="mt-12 p-12 sm:px-8 bg-white text-slate-900 text-base text-left leading-6 rounded shadow-sm">
+                              <tr>
+                                <td class="text-left w-1/2 inline-block sm:w-full">
+                                  <a href="https://www.getapartmentiq.com">
+                                    <img src="https://uploads-ssl.webflow.com/5fe0cc27f2237d09abda82f6/633b4162a7fb5efa376b85cb_IQ_logo.png" width="140" alt="ApartmentIQ" class="max-w-full align-left [border:0]">
+                                  </a>
+                                </td>
+                                <td class="text-right w-1/2 inline-block text-sm text-[#6B7280] sm:w-full sm:text-left sm:mt-5">
+                                  {{{ page.headerSubText }}}
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <table class="w-full" role="separator">
+                                    <tr>
+                                      <td class="py-8">
+                                        <div class="bg-slate-200 h-px leading-px">&zwnj;</div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <block name="template"></block>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr role="separator">
+                    <td class="h-12"></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center text-slate-600 text-xs px-6 pb-12">
+                      <p class="max-w-96 m-auto">
+                        This report was scheduled by zac@rentable.co. <a href="url">Click here</a> to manage your report preferences.
+                      </p>
+                      <br/>
+                      <p>
+                        © 2023 ApartmentIQ
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
