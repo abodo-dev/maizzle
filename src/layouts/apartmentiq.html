@@ -55,7 +55,7 @@
                                   </a>
                                 </td>
                                 <td class="text-right w-1/2 inline-block text-sm text-[#6B7280] sm:w-full sm:text-left sm:mt-5">
-                                  {{{ page.headerSubText }}}
+                                  {{{ page.headerSubText || '' }}}
                                 </td>
                               </tr>
                               <tr>
@@ -85,10 +85,12 @@
                   </tr>
                   <tr>
                     <td class="text-center text-slate-600 text-xs px-6 pb-12">
-                      <p class="max-w-96 m-auto">
-                        This report was scheduled by zac@rentable.co. <a href="url">Click here</a> to manage your report preferences.
-                      </p>
-                      <br/>
+                      <if condition="page.isReport">
+                        <p class="max-w-96 m-auto">
+                          This report was scheduled by zac@rentable.co. <a href="url">Click here</a> to manage your report preferences.
+                        </p>
+                        <br/>
+                      </if>
                       <p>
                         © 2023 ApartmentIQ
                       </p>
